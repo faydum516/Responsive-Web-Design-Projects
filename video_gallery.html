@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Video Site</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;600&family=Vujahday+Script&display=swap');
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background-color: rgba(0, 0, 0, 0.025);
+            }
+            #navbar {
+                background-color:rgba(155, 155, 155);
+	            height: 70px;
+	            width: 100%;
+	            position: fixed;
+            }
+            #header {
+                font-family: 'Vujahday Script', cursive;
+                font-size: 1.25em; /* By default, 1em is equivalent to 16px , and 2em is equivalent to 32px. */
+	            position: absolute;
+	            left: 60px;
+	            display: flex;
+	            justify-content: center;
+	            align-items: center;
+	            height: 100%;
+            }
+            .video-watch-bg-section {
+                width: 100%;
+                height: 85vh;
+	            display: flex;
+	            justify-content: center;
+	            align-items: center;
+	            flex-direction: column;
+            }
+            .video {
+                margin-top: 25px;
+	            padding: 15px;
+	            max-width: 560px;
+                max-height: 315px;
+            }
+            .buttons {
+	            width: 200px;
+	            display: flex;
+	            justify-content: space-between;
+            }
+            .buttons button {
+                background-color: rgba(0, 0, 0, 0.11);
+	            border: 1px solid rgba(0, 0, 0, 0.432);
+	            border-radius: 5px;
+	            padding: 5px 10px;
+	            font-family: 'Spline Sans', sans-serif;
+	            font-weight: 500;
+                cursor: pointer;
+            }
+            .buttons button:hover {
+                background-color: rgba(0, 0, 0, 0.25);
+            }
+            .video-table {
+                display: flex;
+	            justify-content: center;
+	            align-items: center;
+            }
+            .img {
+                width: 200px;
+                height: 115px;
+                object-fit: cover;
+            }
+            .img:hover {
+                cursor: pointer;
+            }
+            .fig-caption {
+                text-align: center;
+                font-size: 0.875em;  /* By default, 1em is equivalent to 16px , and 2em is equivalent to 32px. */
+            }
+
+            @media screen and (max-width: 800px) {
+                .video-watch-bg-section {
+                    height: 60vh;
+                }
+                .video {
+                    max-width: 280px;
+                    max-height: 157.5px;
+                }
+                .img {
+                    width: 100px;
+                    height: 57.5px;
+                }
+                .fig-caption {
+                    font-size: 0.5625em; /* By default, 1em is equivalent to 16px , and 2em is equivalent to 32px. */
+                } 
+            }
+        </style>
+	</head>
+	<body>
+		<nav id="navbar">
+			<header id="header">
+				<h1>Rozeo</h1>
+			</header>
+		</nav>
+		<main id="main">
+            <section class="video-watch-bg-section">
+                <video id="myVideo" class="video" controls autoplay> 
+                    <source src="https://www.dropbox.com/s/lczw607pqqgovtk/Ip%20Man%20Naruto.mp4?dl=0&raw=1" type="video/mp4">
+                </video>
+                <aside class="buttons">
+                    <button onclick="prev()">Prev</button>
+                    <button onclick="next()">Next</button>
+                </aside>
+            </section>
+            <table class="video-table">
+                <tr>
+                    <td>
+                        <figure class="fig">
+                            <img class="img" id="0" src="https://www.dropbox.com/s/e3atae6xbvqyc47/Ip_Man_Naruto.jpeg?dl=0&raw=1" alt="Ip Man Naruto" onclick="play('https://www.dropbox.com/s/lczw607pqqgovtk/Ip%20Man%20Naruto.mp4?dl=0&raw=1', this.id)" />
+                            <figcaption class="fig-caption">Ip Man Naruto</figcaption>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure>
+                            <img class="img" id="1" src="https://www.dropbox.com/s/02lzhnmihvz0h95/Numa_Numa.jpeg?dl=0&raw=1" alt="Numa Numa" onclick="play('https://www.dropbox.com/s/33ny26wfp9k0o67/Numa%20Numa.mp4?dl=0&raw=1', this.id)" />
+                            <figcaption class="fig-caption">Numa Numa</figcaption>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure>
+                            <img class="img" id="2" src="https://www.dropbox.com/s/fcf2nv4e63tzy0x/Can%27t_touch_this.jpeg?dl=0&raw=1" alt="Can't Touch This" onclick="play('https://www.dropbox.com/s/0r66k2eazk8hojo/Can%27t%20touch%20this.mp4?dl=0&raw=1', this.id)" />
+                            <figcaption class="fig-caption">Can't Touch This</figcaption>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure>
+                            <img class="img" id="3" src="https://www.dropbox.com/s/52h6m1o20o8dvdu/Guy_uses_a_fake_gun_but.....jpeg?dl=0&raw=1" alt="Fake Gun Funny" onclick="play('https://www.dropbox.com/s/3lrv51l0oo6sni8/Guy%20uses%20a%20fake%20gun%20but.....mp4?dl=0&raw=1', this.id)" />
+                            <figcaption class="fig-caption">Fake Gun Funny</figcaption>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <figure>
+                            <img class="img" id="4" src="https://staticg.sportskeeda.com/editor/2021/06/8ccdd-16236645233283-800.jpg" alt="Israel Adesanya OP1" onclick="play('https://www.dropbox.com/s/4gwfm6dulwylnah/Israel%20Adesanya%202021%20Anime%20Opening%20%E1%B4%B4%E1%B4%B0.mp4?dl=0&raw=1', this.id)" />
+                            <figcaption class="fig-caption">Israel Adesanya OP1</figcaption>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure>
+                            <img class="img" id="5" src="https://www.dropbox.com/s/oh2xicaydked3us/Is_this_JoJo%27s_Bizarre_Adventure.jpeg?dl=0&raw=1" alt="Will's Bizarre Adventure" onclick="play('https://www.dropbox.com/s/h01kqgq05v6exst/Is%20this%20JoJo%27s%20Bizarre%20Adventure.mp4?dl=0&raw=1', this.id)" />
+                            <figcaption class="fig-caption">Will's Bizarre Adventure</figcaption>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure>
+                            <img class="img" id="6" src="https://www.dropbox.com/s/edaan6l3lymgo2m/Phil_dancing_on_the_subway%21.jpeg?dl=0&raw=1" alt="Phil Dancing on the Subway" onclick="play('https://www.dropbox.com/s/8kmn89puahb84bg/Phil%20dancing%20on%20the%20subway%21.mp4?dl=0&raw=1', this.id)" />
+                            <figcaption class="fig-caption">Phil's Subway Dance</figcaption>
+                        </figure>
+                    </td>
+                    <td>
+                        <figure>
+                            <img class="img" id="7" src="https://www.dropbox.com/s/b6cdv86f5yd5mhu/Kung_Pow_-_Betty_vs._Master_Tang_-_A_Fair_Use_Critique%21.jpeg?dl=0&raw=1" alt="Betty vs Master Tang" onclick="play('https://www.dropbox.com/s/t1t1q3j9gn7u3qi/Kung%20Pow%20-%20Betty%20vs.%20Master%20Tang%20-%20A%20Fair%20Use%20Critique%21.mp4?dl=0&raw=1', this.id)" />
+                            <figcaption class="fig-caption">Betty vs Master Tang</figcaption>
+                        </figure>
+                    </td>
+                </tr>
+            </table>
+		</main>
+        <script>
+            var videos = ["https://www.dropbox.com/s/lczw607pqqgovtk/Ip%20Man%20Naruto.mp4?dl=0&raw=1", 
+			  "https://www.dropbox.com/s/33ny26wfp9k0o67/Numa%20Numa.mp4?dl=0&raw=1", 
+			  "https://www.dropbox.com/s/0r66k2eazk8hojo/Can%27t%20touch%20this.mp4?dl=0&raw=1",
+			  "https://www.dropbox.com/s/3lrv51l0oo6sni8/Guy%20uses%20a%20fake%20gun%20but.....mp4?dl=0&raw=1",
+			  "https://www.dropbox.com/s/4gwfm6dulwylnah/Israel%20Adesanya%202021%20Anime%20Opening%20%E1%B4%B4%E1%B4%B0.mp4?dl=0&raw=1",
+			  "https://www.dropbox.com/s/h01kqgq05v6exst/Is%20this%20JoJo%27s%20Bizarre%20Adventure.mp4?dl=0&raw=1",
+              "https://www.dropbox.com/s/8kmn89puahb84bg/Phil%20dancing%20on%20the%20subway%21.mp4?dl=0&raw=1",
+              "https://www.dropbox.com/s/t1t1q3j9gn7u3qi/Kung%20Pow%20-%20Betty%20vs.%20Master%20Tang%20-%20A%20Fair%20Use%20Critique%21.mp4?dl=0&raw=1"];
+
+            var index;
+            
+            function play(source, id) {
+                document.getElementById('myVideo').src = source;
+                index = Number(id);
+            }
+
+            function prev() {
+                index--;
+                if (index < 0) {
+                    index = videos.length - 1;
+                }
+                document.getElementById("myVideo").src = videos[index];
+            }
+
+            function next() {
+                index++;
+                if (index > videos.length - 1) {
+                    index = 0;
+                }
+                document.getElementById("myVideo").src = videos[index];
+            }
+        </script>
+	</body>
+</html>

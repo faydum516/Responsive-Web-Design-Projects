@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Photo Image Gallery</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato&family=Open+Sans:wght@500&display=swap');
+
+            body {
+                margin: 0;
+                padding: 0; 
+            }
+            #navbar {
+                height: 70px;
+                width: 100%;
+                background-color: rgb(133, 133, 133);
+                display: flex;
+                align-items: center; 
+                justify-content: center;
+            }
+            #navbar #logo-header {
+                display: flex; 
+                position: absolute;
+                left: 50px;
+                align-items: center;
+                justify-content: center;
+                height: 70px;
+            }
+            #navbar #logo-header #header-img {
+                width: 55px;
+            }
+            #navbar #logo-header h1 {
+                padding: 5px;
+                font-family: 'Great Vibes', cursive;
+                font-size: 24px;
+            }
+            #navbar ul {
+                position: absolute;
+                right: 50px;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            #navbar ul li {
+                display: inline-block;
+                padding: 0 20px;
+                text-align: center;
+            }
+            #navbar ul li .nav-link {
+                text-decoration: none; 
+                color: black;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight: 500;
+            }
+            #navbar ul li .nav-link:hover {
+                color: blue;
+                cursor: pointer;
+            }
+            #full_image-bg {
+                position: fixed;
+                display: none;
+            }
+            #main {
+                display: flex;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.2);
+                padding: 20px 0;
+            }
+            #main #table {
+                border: 5px solid black;
+                margin: 20px 0;
+                border-collapse: collapse;
+            }
+            #main #table #table-head {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 22px;
+                padding: 15px 0;
+                background-color: rgb(170, 170, 170);
+            }
+            #main #table tr td .img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+            }
+            #main #table tr td .img:hover {
+                cursor: pointer;
+            }
+            .img-container {
+                position: relative;
+                height: 70%;
+            }
+            .img-container #ClosingX {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                font-size: 20px;
+                font-family: 'Arimo', sans-serif;
+                font-weight: 600;
+                cursor: pointer;
+            }
+            .arrow {
+                border: solid black;
+                border-width: 0 3px 3px 0;
+                display: inline-block;
+                padding: 6px;
+                cursor: pointer;
+            }
+            .left {
+                transform: rotate(135deg);
+            }
+            .right {
+                transform: rotate(-45deg);
+            }
+            #footer {
+                background-color: rgb(133, 133, 133);
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding-bottom: 15px;
+            }
+            #footer p {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+                width: 98px;
+                height: 21px; 
+                text-align: center;
+            }
+            #footer #follow {
+                width: 188px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #footer #follow .fa {
+                font-size: 30px;
+                text-decoration: none;
+                color: #1d1a1a;
+                width: 50px;
+                height: 50px;
+                margin: 0 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            } 
+
+            @media screen and (max-width: 725px) {
+                .img-container {
+                    height: 38.75%;
+                }
+                #navbar #logo-header #header-img {
+                    width: 45px; 
+                }
+                #navbar #logo-header h1 {
+                    font-size: 20px;
+                }
+                #main #table #table-head {
+                    font-size: 15.5px;
+                }
+                #main #table tr td .img {
+                    width: 95px;
+                    height: 95px;
+                    object-fit: cover;
+                }
+                #footer p {
+                    font-size: 14px;
+                }
+                #footer .fa {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            @media screen and (max-width: 580px) {
+                #navbar {
+                    flex-direction: column;
+                    height: 150px;
+                    padding-bottom: 5px;
+                }
+                #navbar #logo-header {
+                    position: static;
+                }
+                #navbar ul {
+                    position: static;
+                    width: 115px;
+                }
+                #navbar ul li {
+                    display: block;
+                    padding: 2.5px 0;
+                }
+            }
+        </style> 
+	</head>
+	<body>
+        <div id="full_image-bg"></div>
+        <nav id="navbar">
+            <header id="logo-header">
+                <img id="header-img" src="https://static.thenounproject.com/png/203202-200.png" alt="CrazyJay Logo" />
+                <h1>CrazyJay</h1>
+            </header>
+            <ul>
+                <li><a class="nav-link" href="#">Home</a></li>
+                <li><a class="nav-link" href="#">Contact</a></li>
+                <li><a class="nav-link" href="#footer">Follow Me</a></li> <!--The element with the "footer" id is a footer element where you follow on social media.-->
+            </ul>
+        </nav>
+        <main id="main">
+            <table id="table">
+                <tr>
+                    <th id="table-head" colspan="4">Photo Image Gallery</th>
+                </tr>
+                <tr>
+                    <td><img class="img" id="0" src="https://lp-cms-production.imgix.net/2021-02/Tokyo%20Main.jpg" alt="Tokyo" onclick="show(this.src, this.alt, this.id)" /></td>
+                    <td><img class="img" id="1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Guangzhou_Twin_Towers.jpg/1200px-Guangzhou_Twin_Towers.jpg" alt="Guangzhou" onclick="show(this.src, this.alt, this.id)" /></td>
+                    <td><img class="img" id="2" src="https://cdn.internationalliving.com/wp-content/uploads/2007/07/costa-rica-san-ramon.jpg" alt="Costa Rica 1" onclick="show(this.src, this.alt, this.id)" /></td>
+                    <td><img class="img" id="3" src="https://static.barcelo.com/content/dam/bhg/master/es/main-destination-photo/country/costa-rica/destino_costa_rica.jpg.bhgimg.optm1100.jpg/1604675513448.jpg" alt="Costa Rica 2" onclick="show(this.src, this.alt, this.id)" /></td>
+                </tr>
+                <tr>
+                    <td><img class="img" id="4" src="https://www.history.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc5MDg3NTA5MDg3NTYx/taj-mahal-2.jpg" alt="Taj Mahal" onclick="show(this.src, this.alt, this.id)" /></td>
+                    <td><img class="img" id="5" src="https://i.insider.com/5cc1edcdb14bf471cf44807d?width=1136&format=jpeg" alt="Great Walls of China" onclick="show(this.src, this.alt, this.id)" /></td>
+                    <td><img class="img" id="6" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Niagara_Falls_and_Niagara_River.jpg" alt="Niagara Falls" onclick="show(this.src, this.alt, this.id)" /></td>
+                    <td><img class="img" id="7" src="https://www.tokyo-dome.co.jp/tourists/photo-gallery/modal/img/img_index_modal_001.jpg" alt="Tokyo Dome" onclick="show(this.src, this.alt, this.id)" /></td>
+                </tr>
+                <tr>
+                    <td><img class="img" id="8" src="https://static01.nyt.com/images/2021/01/17/multimedia/15aroundtheworld-singapore15/15aroundtheworld-singapore15-mobileMasterAt3x.jpg" alt="Singapore" onclick="show(this.src, this.alt, this.id)" /></td>
+                    <td><img class="img" id="9" src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg" alt="Grand Canyon" onclick="show(this.src, this.alt, this.id)" /></td>
+                    <td><img class="img" id="10" src="https://pacpark.com/wp-content/uploads/2019/06/One-Day-in-Santa-Monica.jpg" alt="Santa Monica" onclick="show(this.src, this.alt, this.id)" /></td>
+                    <td><img class="img" id="11" src="https://hopmontreal.com/wp-content/uploads/2018/08/parc-jean-drapeau-montreal.jpg" alt="Parc Jean-Drapeau" onclick="show(this.src, this.alt, this.id)" /></td>
+                </tr>
+                <tr>
+                    <td><img class="img" id="12" src="https://image.newyorkcity.ca/wp-content/uploads/2015/03/Madison-Square-Garden-in-New-York.jpg" alt="Madison Square Garden" onclick="show(this.src, this.alt, this.id)" /></td>
+                    <td><img class="img" id="13" src="https://cimg0.ibsrv.net/cimg/www.fodors.com/2000x2000_60/908/22195981_1917536698262759_6841298137206248555_n-333908.jpg" alt="Château Frontenac" onclick="show(this.src, this.alt, this.id)" /></td>
+                    <td><img class="img" id="14" src="https://www.toureiffel.paris/sites/default/files/styles/crop_principale/public/2022-01/Illumination%20COP21%20One%20heart%20One%20tree%20%C2%A9%20E.Livinec-_2.jpg?itok=Q4cMBJQ7" alt="Eiffel Tower" onclick="show(this.src, this.alt, this.id)" /></td>
+                    <td><img class="img" id="15" src="https://hrp.imgix.net/https%3A%2F%2Fhistoricroyalpalaces.picturepark.com%2FGo%2Fu0UOVB6h%2FV%2F3269%2F29?auto=format&s=65b25043d80a8e6e8ab018113790240e" alt="Tower of London" onclick="show(this.src, this.alt, this.id)" /></td>
+                </tr>
+            </table>
+		</main>
+        <footer id="footer">
+            <p>FOLLOW ME</p>
+            <div id="follow">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+        </footer>
+        <script>
+            var index, img;
+
+            function show(src, alt, id) {
+                document.getElementById("full_image-bg").style.display = "flex";
+                document.getElementById("full_image-bg").style.justifyContent = "center";
+                document.getElementById("full_image-bg").style.alignItems = "center";
+                document.getElementById("full_image-bg").innerHTML = '<i class="arrow left" onclick="prev()"></i><div class="img-container"><img class="full_image" id="' + id + '" src="' + src + '" height="100%" alt="' + alt + '" /><span id="ClosingX" onclick="exit()">X</span></div><i class="arrow right" onclick="next()"></i>';
+                document.getElementById("full_image-bg").style.width = "100%";
+                document.getElementById("full_image-bg").style.height = "100%";
+                document.getElementById("full_image-bg").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+                index = Number(document.querySelector(".full_image").id); // The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.
+                window.addEventListener("keydown", arrowPress); // The arrowPress function consists only of pressing the left and right keys.
+            }
+            function exit() {
+                window.removeEventListener("keydown", arrowPress);
+                document.getElementById("full_image-bg").style.display = "none";
+            }
+            function next() {
+                img = document.querySelector(".full_image"); // The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.
+                index ++;
+                if (index > document.getElementsByClassName("img").length - 1) {
+                    index = 0;
+                }
+                img.src = document.getElementsByClassName("img")[index].src;
+            }
+            function prev() {
+                img = document.querySelector(".full_image"); // The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.
+                index --;
+                if (index < 0) {
+                    index = document.getElementsByClassName("img").length - 1;
+                }
+                img.src = document.getElementsByClassName("img")[index].src;
+            }
+            function arrowPress(event) {
+                if (event.key == "ArrowLeft") {
+                    img = document.querySelector(".full_image"); // The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.
+                    index --;
+                    if (index < 0) {
+                        index = document.getElementsByClassName("img").length - 1;
+                    }
+                    img.src = document.getElementsByClassName("img")[index].src;
+                }
+                if (event.key == "ArrowRight") {
+                    img = document.querySelector(".full_image"); // The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.
+                    index ++;
+                    if (index > document.getElementsByClassName("img").length - 1) {
+                        index = 0;
+                    }
+                    img.src = document.getElementsByClassName("img")[index].src;
+                }
+                if (event.key == "Escape") {
+                    window.removeEventListener("keydown", arrowPress);
+                    document.getElementById("full_image-bg").style.display = "none";
+                }
+            }
+        </script>
+	</body>
+</html>

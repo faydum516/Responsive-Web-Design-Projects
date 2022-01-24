@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Wing Chun</title>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        #navbar {
+            position: fixed; 
+            width: 270px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        #navbar #header h1 {
+            padding: 20px;
+            font-weight: 200;
+        }
+        #navbar #menu {
+            height: calc(100vh - 73px); 
+            overflow-y: scroll;
+            list-style: none;
+        }
+        #navbar #menu li .nav-link {
+            display: block;
+            border-top: 1px solid black;
+            padding: 15px;
+        }
+        #navbar #menu li ul {
+            display: none;
+        }
+        #navbar #menu li:hover ul {
+            display: block;
+            background-color: rgba(0, 0, 0, 0.22);
+        }
+        #navbar #menu li:hover ul li .nav-link {
+            padding-left: 35px;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: #000;
+        }
+        .nav-link:hover {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        #main-doc {
+            float: right;
+            width: calc(100% - 270px); 
+            padding: 0;
+            margin: 0;
+        }
+        #main-doc .main-section {
+            margin-bottom: 15px;
+        }
+        #main-doc .main-section header h1 {
+            padding: 15px;
+            font-weight: 100;
+            font-size: 28px;
+        }
+        #main-doc .main-section p {
+            padding: 15px;
+        }
+        .main-section .main-section {
+            padding: 15px;
+        }
+        .main-section .main-section header h2 {
+            padding: 15px;  
+            font-weight: 100;
+            font-size: 21px;
+        } 
+        .wing_chun-img-bg, 
+        .wing_chun-video-bg {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+        .wing_chun-img-bg .wing_chun-img,
+        .wing_chun-video-bg .wing_chun-video {
+            padding: 10px;
+        }
+        .wing_chun-img-bg code {
+            padding: 10px;
+            font-size: 12px;
+        }
+        .main-section ul, .main-section ol {
+            padding-left: 45px;
+        }
+
+        @media screen and (max-width: 900px) {
+            #navbar {
+                position: static;
+                width: 100%;
+                text-align: center;
+            }
+            #main-doc {
+                float: none;
+                width: 100%;
+            }
+            #navbar #menu {
+                height: 300px;
+                overflow-y: scroll;
+                border: 1px solid black;
+            }
+        }
+        </style>
+	</head>
+	<body>
+        <nav id="navbar">
+            <header id="header">
+                <h1>Wing Chun</h1>
+            </header>
+            <ul id="menu">
+                <li>
+                    <a class="nav-link" href="#Introduction">Introduction</a>
+                    <ul>
+                        <li><a class="nav-link" href="#Centerline_Principle">Centerline Principle</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Wing_Chun_Fighting_Stance">Wing Chun Fighting Stance</a>
+                    <ul>
+                        <li><a class="nav-link" href="#Wing_Chun_Turning_Stance">Wing Chun Turning Stance</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link" href="#Wing_Chun_Basic_Footwork">Wing Chun Basic Footwork</a></li>
+                <li><a class="nav-link" href="#Wing_Chun_Punching_Drills">Wing Chun Punching Drills</a></li>
+                <li>
+                    <a class="nav-link" href="#Wing_Chun_Blocks">Wing Chun Blocks</a>
+                    <ul>
+                        <li><a class="nav-link" href="#Wing_Chun_Tan_Sau">Wing Chun Tan Sau</a></li>
+                        <li><a class="nav-link" href="#Wing_Chun_Pak_Sau">Wing Chun Pak Sau</a></li>
+                        <li><a class="nav-link" href="#Wing_Chun_Bong_Sau">Wing Chun Bong Sau</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link" href="#Wing_Chun_Hand_Exercise_(Lap_Sau)">Wing Chun Hand Exercise (Lap Sau)</a></li>
+                <li><a class="nav-link" href="#Wing_Chun_Kicks">Wing Chun Kicks</a></li>
+                <li><a class="nav-link" href="#Wing_Chun_Elbow_Drill">Wing Chun Elbow Drill</a></li>
+                <li>
+                    <a class="nav-link" href="#Wing_Chun_Forms">Wing Chun Forms</a>
+                    <ul>
+                        <li><a class="nav-link" href="#Siu_Lim_Tau">Siu Lim Tau</a></li>
+                        <li><a class="nav-link" href="#Chum_Kiu">Chum Kiu</a></li>
+                        <li><a class="nav-link" href="#Biu_Jee">Biu Jee</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link" href="#Wing_Chun_Fight_Videos">Wing Chun Fight Videos</a></li>
+                <li><a class="nav-link" href="#References">References</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction">
+                <header>
+                    <h1>Introduction</h1>
+                </header>
+                <p>Wing Chun martial arts is a close-combat Kung Fu style which focuses on taking out your opponent as fast as possible. As far as traditional martial arts goes, it was one of the most practical for self-defense in its time, and is still popular for this same reason today. Wing Chun Kung Fu is also highly adaptable for all people since it values timing and structure rather than speed and strength. It means anyone can train in it – big and small – young and old.</p>
+                <section class="main-section" id="Centerline_Principle">
+                    <header>
+                        <h2>Centerline Principle</h2>
+                    </header>
+                    <p>The center-line principle is a core concept in Wing Chun Kung Fu. You want to protect your own center-line while controlling your opponent’s. You do this with footwork. Understanding the center-line will allow you to instinctively know where your opponent is.</p>
+                    <p>Your centerline is an imaginary line drawn vertically down the center of your body. All vital organs are near the center of the body. Keep it away from your opponent by angling it away from him/her.</p>
+                    <div class="wing_chun-img-bg">
+                        <img class="wing_chun-img" src="https://qph.fs.quoracdn.net/main-qimg-d0fedf16ee9e4b861d0baaff1c466438" alt="Wing Chun Centerline" />
+                        <code>Occupying the centerline by forming this triangle.</code>
+                    </div>
+                    <div class="wing_chun-img-bg">
+                        <img class="wing_chun-img" src="https://images.squarespace-cdn.com/content/v1/5d942d9dd1ebf62f908d1f73/1575106191123-8PXRJQAS0F9E1FF9SRMI/Center.JPG" width="300px" alt="Centerline Face-to-face" />
+                        <code>The whole centerline theory including centerline face-to-face.</code>
+                    </div>
+                    <div class="wing_chun-img-bg">
+                        <img class="wing_chun-img" src="https://ih1.redbubble.net/image.1026111157.2885/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" width="300px" alt="Centerline Punch 1" />
+                        <code>The centerline punch (1)</code>
+                    </div>
+                    <div class="wing_chun-img-bg">
+                        <img class="wing_chun-img" src="https://www.wingchunkwoon.com/wp-content/uploads/2013/03/punch_cl.jpg" alt="Centerline Punch 2" />
+                        <code>The centerline punch (2)</code>
+                    </div>
+                    <div class="wing_chun-img-bg">
+                        <img class="wing_chun-img" src="https://2.bp.blogspot.com/-n3_mRLyUdu0/VwyOZRC3HeI/AAAAAAAAAJw/8ah092QXs2UoIahJnR1OmkYmB7PK6srDg/s1600/Screen-shot-2011-03-16-at-12.47.09-PM.png" style="border: 1px solid black;" alt="Wing Chun Human Anatomy" />
+                        <code>Human anatomy on self-defense.</code>
+                    </div>
+                    <p>There are three main guidelines for the centerline.</p>
+                    <ul>
+                        <li>The one who controls the centerline will control the fight.</li>
+                        <li>Protect and maintain your own centerline while you control and exploit your opponent`s.</li>
+                        <li>Control the centerline by occupying it.</li>
+                    </ul>
+                </section>
+            </section>
+            <section class="main-section" id="Wing_Chun_Fighting_Stance">
+                <header>
+                    <h1>Wing Chun Fighting Stance</h1>
+                </header>
+                <p>First, we start off the horse stance, which is called yee jee kim yeung ma (二字拑羊馬), which is the basic foundation stance of Wing Chun. This is the very first thing you learn on day one of class and if you fall in love with the art, something that you will spend the rest of your lifetime mastering. The source of Wing Chun strength comes about from the stance, and since Wing Chun is an art that relies on the bare minimum of muscle, one must focus on perfecting this stance. The basic goal for this stance is to develop how to find, control, maintain and overall be aware of one’s center.</p>
+                <div class="wing_chun-img-bg">
+                    <img class="wing_chun-img" src="https://i.ytimg.com/vi/Zl9abZBWJVo/sddefault.jpg" width="400px" alt="Wing Chun Horse Stance" />
+                    <code>Horse stance.</code>
+                </div>
+                <div class="wing_chun-img-bg">
+                    <img class="wing_chun-img" src="https://images.squarespace-cdn.com/content/v1/5d942d9dd1ebf62f908d1f73/1574329925663-35NCL2NHIOQRXTZI29Z4/Posture2.jpg" width="300px" alt="Wing Chun Posture" />
+                    <code>Horse stance posture.</code>
+                </div>
+                <p>Here are the 5 steps of doing the horse stance.</p>
+                <div class="wing_chun-img-bg">
+                    <img class="wing_chun-img" src="https://i.pinimg.com/originals/ee/b1/62/eeb1627155ed1cb777ae62e13c20fb29.jpg" width="300px" alt="Wing Chun 5 Steps of Horse Stance" />
+                    <code>5 steps of doing the horse stance.</code>
+                </div>
+                <p>In a real fight you will probably not adopt this exact Wing Chun posture but it is a good fundamental stance for correct application of techniques when learning. This is a standard Wing Chun neutral stance and is a starting position for upcoming exercises.</p>
+                <p>To adopt this Wing Chun stance, start in the half squat. Whilst keeping your feet in the same spot, turn on them so that one leg is in front of the other. Put your hands up to around chest height. Whichever leg is forward most, the same hand is also forward most. Your rear leg supports most of your body’s weight, approximately 70% of it. You should be able to lift your lead foot into the air if needed, e.g., for kicking. Keep your arms slightly bent.</p>
+                <div class="wing_chun-img-bg">
+                    <img class="wing_chun-img" src="https://storage.ko-fi.com/cdn/useruploads/display/412837a0-f305-44b6-a64a-1be429ec4b8b_1604136105885.png" alt="Wing Chun Fighting Left Stance" />
+                    <code>Left lead fighting stance.</code>
+                </div>
+                <section class="main-section" id="Wing_Chun_Turning_Stance">
+                    <header>
+                        <h2>Wing Chun Turning Stance</h2>
+                    </header>
+                    <p>We start in the fighting stance. Assuming we are in a left lead stance, we rotate our body with our feet to the right by 180<sup>o</sup>. This causes our body weight to shift from our left leg to our right and our hands also change position. Then, we finish in the fighting stance with a right lead.</p>
+                    <div class="wing_chun-img-bg">
+                        <img class="wing_chun-img" src="https://storage.ko-fi.com/cdn/useruploads/display/412837a0-f305-44b6-a64a-1be429ec4b8b_1604136105885.png" style="transform: scaleX(-1);" alt="Wing Chun Fighting Right Stance" />
+                        <code>Right lead fighting stance.</code>
+                    </div>
+                </section>
+            </section>
+            <section class="main-section" id="Wing_Chun_Basic_Footwork">
+                <header>
+                    <h1>Wing Chun Basic Footwork</h1>
+                </header>
+                <p>Correct footwork is very important. Without it you will become unbalanced and your techniques will lose effectiveness.</p>
+                <p>The primary use of footwork is to control distance. Knowing when and how to close and gain distance allows you to effectively attack and defend. You want to attack without getting hit. When your opponent moves back, you can move forward and vise-verse.</p>
+                <div class="wing_chun-video-bg">
+                    <iframe class="wing_chun-video" width="560" height="315" src="https://www.youtube.com/embed/AMywiwTDnCA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section class="main-section" id="Wing_Chun_Punching_Drills">
+                <header>
+                    <h1>Wing Chun Punching Drills</h1>
+                </header>
+                <p>Learning to properly throw a single punch introduces many important Wing Chun concepts including body alignment, weight distribution, changing hands, correct striking technique, balance, etc. When striking your limb should never become fully straightened. This is true for all Wing Chun hand strikes and kicks. Not only is the shock bad for your elbows and knees, you will also be more likely to miss.</p>
+                <p>We start in the half squat position with our hands up and our arms relaxed. Start in the half squat position with your hands up and your arms relaxed. Punch out with your lead hand. As you do so, tilt your body and turn slightly so most your weight is on your rear leg. Notice the line of the body. You are angling out but punching to the center. Shifting your weight generates power and also places you out of your opponent’s attack line. Your rear hand is your defense, and is called the wu sao (護手), which means "the protecting hand".</p>
+                <div class="wing_chun-img-bg">
+                    <img class="wing_chun-img" src="http://www.wingchunonline.com/wp-content/uploads/2012/08/Wu_Sao.jpg" alt="Wu Sao (Protecting Hand)" />
+                    <code>Wu Sao.</code>
+                </div>
+                <p>After you punch open your Wing Chun fist to relax it. Do not start or stay stiff when you strike. You will lose power and Wing Chun punch speed. As you relax your punching hand start punching with your other hand. Shift your weight to your other leg. Also, do not overextend your arm; your elbow should never lock.</p>
+                <div class="wing_chun-img-bg">
+                    <img class="wing_chun-img" src="https://www.wikihow.com/images/thumb/7/76/Learn-Wing-Chun-Step-4-Version-7.jpg/v4-460px-Learn-Wing-Chun-Step-4-Version-7.jpg" width="300px" alt="Channeling Punch" />
+                    <code>How to properly channel and throw your punch (Look at the person in the blue shirt).</code>
+                </div>
+            </section>
+            <section class="main-section" id="Wing_Chun_Blocks">
+                <header>
+                    <h1>Wing Chun Blocks</h1>
+                </header>
+                <p>In this section you will learn some Wing Chun basic blocks.</p>
+                <section class="main-section" id="Wing_Chun_Tan_Sau">
+                    <header>
+                        <h2>Wing Chun Tan Sau</h2>
+                    </header>
+                    <p>This lesson teaches the basic application of Tan Sau (攤手), which is the dispersing hand, a Wing Chun arm and hand position primarily used as Wing Chun Hand blocks. It emphasizes the use of the body to do the work as opposed to just the hand. It also introduces grabbing, the counterattack, and the concept of telegraphing. Wing Chun defense deflects attacks as opposed to direct force-on-force. This allows the weaker person to gain leverage over a stronger opponent. Tan Sau is a good way to deal with mid-level straight attacks. Begin in the half squat position with your hands up. Move your palm up and out from your center. Your elbow should end up about a fist-and-a-half length away from your body.</p>
+                    <div class="wing_chun-img-bg">
+                        <img class="wing_chun-img" src="http://www.wingchunonline.com/wp-content/uploads/2012/08/Tan_Sao.jpg" alt="Tan Sau" />
+                        <code>Tan Sau.</code>
+                    </div>
+                    <div class="wing_chun-video-bg">
+                        <iframe class="wing_chun-video" width="560" height="315" src="https://www.youtube.com/embed/xsXAK3DtbDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </section>
+                <section class="main-section" id="Wing_Chun_Pak_Sau">
+                    <header>
+                        <h2>Wing Chun Pak Sau</h2>
+                    </header>
+                    <p>Pak Sau (slapping hand) is another fundamental Wing Chun movement. This lesson shows using Pak Sau as a defensive technique. It also emphasizes on the awareness of body positioning, grabbing, and turning from one side to the other.</p>
+                    <p>As the punch comes in, turn your body to the side and use the side of your palm (below the little finger) on your opponent’s elbow. A small Wing Chun elbow block. Your hand comes from the center of your body. Use your whole body in the movement. It is important to turn your body to the side, or you will get hit.</p>
+                    <div class="wing_chun-img-bg">
+                        <img class="wing_chun-img" src="http://www.wingchunonline.com/wp-content/uploads/2012/08/Pak_Sao.jpg" alt="Pak Sau" />
+                        <code>Pak Sau.</code>
+                    </div>
+                    <div class="wing_chun-video-bg">
+                        <iframe class="wing_chun-video" width="560" height="315" src="https://www.youtube.com/embed/L6z7xrr_Ews" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </section>
+                <section class="main-section" id="Wing_Chun_Bong_Sau">
+                    <header>
+                        <h2>Wing Chun Bong Sau</h2>
+                    </header>
+                    <p>Bong Sau (膀手) is a defensive technique unique to Wing Chun. Use it to divert a punch by creating an angle of deflection.</p>
+                    <p>Begin in the half squat position with your hands up and in one movement, turn your hand down and your elbow up. As you do so, turn your waist and tilt your body so your feet are in a fighting stance position. Your waist does the work, not your arm.</p>
+                    <p>Keep your arm in line. You other hand is a guard hand in case your opponent’s strike passes through.</p>
+                    <div class="wing_chun-img-bg">
+                        <img class="wing_chun-img" src="http://www.wingchunonline.com/wp-content/uploads/2012/08/Bong_Sao.jpg" alt="Bong Sau" />
+                        <code>Bong Sau.</code>
+                    </div>
+                    <div class="wing_chun-video-bg">
+                        <iframe class="wing_chun-video" width="560" height="315" src="https://www.youtube.com/embed/qyIXOinBHfM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p>Turn slightly back and bring your hand back to the center. Switch hand positions, so your other hand becomes you lead. Shift your weight to match your new position and then do Bong Sau on your other side.</p>
+                </section>
+            </section>
+            <section class="main-section" id="Wing_Chun_Hand_Exercise_(Lap_Sau)">
+                <header>
+                    <h1>Wing Chun Hand Exercise (Lap Sau)</h1>
+                </header>
+                <p>Lap Sau (拉手), also known as the Grabbing Hand (or Pulling Hand) technique, allows a Wing Chun student to grab an opponent’s arm in order to deflect a potential attack or to pull him offline and/or disrupt his balance.</p>
+                <div class="wing_chun-img-bg">
+                    <img class="wing_chun-img" src="http://www.wingchunonline.com/wp-content/uploads/2012/08/Lop_Sao.jpg" alt="Lap Sau" />
+                    <code>Lap Sau.</code>
+                </div>
+                <div class="wing_chun-video-bg">
+                    <iframe class="wing_chun-video" width="560" height="315" src="https://www.youtube.com/embed/i4qFO4Ll-6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section class="main-section" id="Wing_Chun_Kicks">
+                <header>
+                    <h1>Wing Chun Kicks</h1>
+                </header>
+                <p>The stomp kick, sidekick, and front kick are fundamental Wing Chun kicking forms. This lesson teaches how to do these three basic kicks on a single spot. It helps to improve balance, body position, leg strength and technique.</p>
+                <p>Start from the half squat position and then turn into the switching side’s position with approximately 70% of your weight on your rear leg. Raise your rear leg so your knee is parallel to the floor. Angle your foot out slightly as you kick your foot out. The sole of your foot is what would hit the target. The target is your opponent’s thigh or knee. Do not straighten your leg fully, i.e., your knee should not “lock” into place.</p>
+                <div class="wing_chun-img-bg">
+                    <img class="wing_chun-img" src="http://www.wingchunonline.com/wp-content/uploads/2012/08/frontkick.jpg" alt="Wing Chun Kick" />
+                    <code>Wing Chun Kick</code>
+                </div>
+                <div class="wing_chun-video-bg">
+                    <iframe class="wing_chun-video" width="560" height="315" src="https://www.youtube.com/embed/Wpm2j_woQ1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section class="main-section" id="Wing_Chun_Elbow_Drill">
+                <header>
+                    <h1>Wing Chun Elbow Drill</h1>
+                </header>
+                <p>A Wing Chun elbow drill will help increase response time, muscle memory, etc. Your partner comes in to elbow. Step back and use your hand to defend. This stepping back helps to absorb the Wing Chun Elbow energy. If you do not step back, you will probably get hurt.</p>
+                <div class="wing_chun-img-bg">
+                    <img class="wing_chun-img" src="https://www.wingchunlife.com/images/the-delivery-of-our-strikes-gives-us-an-advantage-21611372.jpg" alt="Wing Chun Elbow Strike" />
+                    <code>Wing Chun Elbow Strike</code>
+                </div>
+                <div class="wing_chun-video-bg">
+                    <iframe class="wing_chun-video" width="560" height="315" src="https://www.youtube.com/embed/eK_7wdNiA94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section class="main-section" id="Wing_Chun_Forms">
+                <header>
+                    <h1>Wing Chun Forms</h1>
+                </header>
+                <p>The martial art Wing Chun has just three hand forms, one form performed against a wooden dummy and two weapons forms. Compared to some other martial arts is very few. The forms in Wing Chun serve more as a reference for fighting rather than a set of moves which can be directly used in sequence in a real situation. So in Wing Chun once the forms have been learned, the techniques are known, but then they have to be understood and applied. The forms are known as Siu Lim Tau (小念頭), Chum Kiu (尋橋), and Biu Jee (鏢指).</p>
+                <section class="main-section" id="Siu_Lim_Tau">
+                    <header>
+                        <h2>Siu Lim Tau</h2>
+                    </header>
+                    <p>Sil Lim Tau which trains the power in the legs through the stance and it trains correct use of power and energy of hand techniques in the first section of the form. On top of this it provides the Wing Chun practitioner with a useful arsenal of blocks and strikes. This therefore provides the foundation for the Wing Chun practitioner.</p>
+                    <div class="wing_chun-video-bg">
+                        <iframe class="wing_chun-video" width="560" height="315" src="https://www.youtube.com/embed/YkC2MVhnySI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </section>
+                <section class="main-section" id="Chum_Kiu">
+                    <header>
+                        <h2>Chum Kiu</h2>
+                    </header>
+                    <p>Chum Kiu then introduces kicks and movement into the system and also show how to use both the feet in footwork and kicks at the same time as the hands in the form of blocks and strikes not forgetting that Chum Kiu also trains the use of power from the hips. It also trains the practitioners body positioning and foot positioning which with turning enables the practitioner to deal with threats from multiple directions, enabling quick efficient turning. This therefore builds on what Siu Lim Tao has provided.</p>
+                    <div class="wing_chun-video-bg">
+                        <iframe class="wing_chun-video" width="560" height="315" src="https://www.youtube.com/embed/a_7HKZrFE2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </section>
+                <section class="main-section" id="Biu_Jee">
+                    <header>
+                        <h2>Biu Jee</h2>
+                    </header>
+                    <p>Biu Jee is only taught to close and trusted Wing Chun practitioners, and contains advanced techniques and emergerncy escapes. It also brings in the training of perfect use of last minute power, enabling the practitioner to use all their techniques to maximum efficiency. Other techniques such as Kop Jarn enable the practitioner to block when trapped or strike at extremely close distances, this combined with other 'emergency techniques' like the Biu Gee from under the elbow enable the practitioner to recover from bad situations, and also the recover at the end of the form which allows for recovery from a fall. Hence Biu Gee completes the system.</p>
+                    <div class="wing_chun-video-bg">
+                        <iframe class="wing_chun-video" width="560" height="315" src="https://www.youtube.com/embed/SkjY_qKy8mA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </section>
+            <section class="main-section" id="Wing_Chun_Fight_Videos">
+                <header>
+                    <h1>Wing Chun Fight Videos</h1>
+                </header>
+                <div class="wing_chun-video-bg">
+                    <iframe class="wing_chun-video" width="560" height="315" src="https://www.youtube.com/embed/Kv9ygN2B8WU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="wing_chun-video-bg">
+                    <iframe class="wing_chun-video" width="560" height="315" src="https://www.youtube.com/embed/08akhqwjBwc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section class="main-section" id="References">
+                <header>
+                    <h1>References</h1>
+                </header>
+                <ol>
+                    <li style="padding: 2.5px;"><a style="text-decoration: none;" href="https://www.survivalfitnessplan.com/wing-chun-techniques-for-beginners/" target="_blank">"Wing Chun Techniques for Beginners"</a>. Survival Fitness Plan. Retrieved 31 December 2021.</li>
+                    <li style="padding: 2.5px;"><a style="text-decoration: none;" href="http://www.kwokwingchun.com/about-wing-chun/the-wing-chun-forms/" target="_blank">"The Wing Chun Forms"</a>. Samuel Kwok Wing Chun Association. Retrieved 1 January 2022.</li>
+                </ol>
+            </section>
+        </main>
+	</body>
+</html>
