@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Product Landing Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="product_landing_page.css">
+	</head>
+	<body>
+        <header id="header">
+            <div id="container">
+                <div id="logo-name">
+                    <img id="header-img" src="https://static.thenounproject.com/png/203202-200.png" width="55px" alt="CrazyJay Log" />
+                    <h1>CrazyJay</h1>
+                </div>
+                <nav id="nav-bar">
+                    <ul>
+                        <li><a class="nav-link" href="#info-section">Info</a></li>
+                        <li><a class="nav-link" href="#video-section">Video</a></li>
+                        <li><a class="nav-link" href="#pricing-section">Pricing</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="empty-top"></div>
+        <section id="info-section">
+            <h2>Head to your own adventures to see nature</h2>
+            <div class="info-part">
+                <img id="budget-img" src="https://icon-library.com/images/budget-icon/budget-icon-9.jpg" width="60px" alt="Budget Symbol" />
+                <p>Settle your own budgets for travel plans. If you're not about when to travel, take your time, but plan financially ahead of your time.</p>
+            </div>
+            <div class="info-part">
+                <img id="travel-img" src="https://i.pinimg.com/originals/4a/a5/34/4aa534605d1afc465c5bdc5dd80f1ecb.png" width="60px" alt="Budget Symbol" />
+                <p>Want to make your travels well-arranged? Call us and we will get them covered right away.</p>
+            </div>
+            <div class="info-part">
+                <img id="cuisine-img" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/food-service-1887154-1599349.png" width="60px" alt="Budget Symbol" />
+                <p>During your travels, we get your breakfast, lunch, and supper meals covered as long as your budgets hold on.</p>
+            </div>
+        </section>
+        <section id="video-section">
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/NPta-zaYnaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section id="pricing-section">
+            <div class="pricing-card">
+                <h2>1 week</h2>
+                <h3>$75</h3>
+                <button>SELECT</button>
+            </div>
+            <div class="pricing-card">
+                <h2>1 month</h2>
+                <h3>$300</h3>
+                <button>SELECT</button>
+            </div>
+            <div class="pricing-card">
+                <h2>1 year</h2>
+                <h3>$3600</h3>
+                <button>SELECT</button>
+            </div>
+        </section>
+        <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+            <h3><label id="email-label" for="email">New here? Please enter your email address and sign up.</label></h3>
+            <input id="email" type="email" name="email" placeholder="Email address" required />
+            <input id="submit" type="submit" value="Sign Up" />
+        </form>
+        <footer class="footer">
+            <p>&copy; 2021 CrazyJay Inc.</p>
+        </footer>
+	</body>
+</html>

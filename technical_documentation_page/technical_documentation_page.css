@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+#navbar {
+    position: fixed; 
+    width: 270px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+#navbar #header h1 {
+    padding: 20px;
+    font-weight: 200;
+}
+#navbar #menu {
+    height: calc(100vh - 73px); 
+    overflow-y: scroll;
+    list-style: none;
+}
+#navbar #menu li .nav-link {
+    display: block;
+    border-top: 1px solid black;
+    padding: 15px;
+}
+#navbar #menu li ul {
+    display: none;
+}
+#navbar #menu li:hover ul {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.22);
+}
+#navbar #menu li:hover ul li .nav-link {
+    padding-left: 35px;
+}
+.nav-link {
+    text-decoration: none;
+    color: #000;
+}
+.nav-link:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#main-doc {
+    float: right;
+    width: calc(100% - 270px); 
+    padding: 0;
+    margin: 0;
+}
+#main-doc .main-section {
+    margin-bottom: 15px;
+}
+#main-doc .main-section header h1 {
+    padding: 15px;
+    font-weight: 100;
+    font-size: 28px;
+}
+#main-doc .main-section p {
+    padding: 15px;
+}
+.main-section .main-section {
+    padding: 15px;
+}
+.main-section .main-section header h2 {
+    padding: 15px;  
+    font-weight: 100;
+    font-size: 21px;
+} 
+.wing_chun-img-bg, 
+.wing_chun-video-bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.wing_chun-img-bg .wing_chun-img,
+.wing_chun-video-bg .wing_chun-video {
+    padding: 10px;
+}
+.wing_chun-img-bg code {
+    padding: 10px;
+    font-size: 12px;
+}
+.main-section ul, .main-section ol {
+    padding-left: 45px;
+}
+
+@media screen and (max-width: 900px) {
+    #navbar {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+    #main-doc {
+        float: none;
+        width: 100%;
+    }
+    #navbar #menu {
+        height: 300px;
+        overflow-y: scroll;
+        border: 1px solid black;
+    }
+}

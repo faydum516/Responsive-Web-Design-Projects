@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Survey Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="survey_form.css">
+        <script src="survey_form.js"></script>
+	</head>
+	<body>
+        <div id="whole-bg">
+            <div id="layer">
+                <main>
+                    <header id="title-header">
+                        <h1 id="title">CrazyJay Survey Form</h1>
+                        <p id="description">We are grateful of you for taking a time to fill it out.</p>
+                    </header>
+                    <div id="survey-bg">
+                        <form id="survey-form">
+                            <label id="name-label" for="name">Name</label>
+                            <input id="name" name="name" type="text" placeholder="Enter your name" required />
+                            <label id="email-label" for="email">Email</label>
+                            <input id="email" name="email" type="email" placeholder="Enter your e-mail address" required />
+                            <label id="number-label" for="number">Age <small>(optional)</small></label>
+                            <input id="number" name="number" type="number" min="10" max="90" placeholder="Age" />
+                            <label id="job-label" for="job">Which option role best describes your dream job?</label>
+                            <select id="dropdown" name="job" onchange="showOtherField(this.options[this.selectedIndex].value, this.name, 0)" required>
+                                <option value="select your option" selected disabled>Select your option</option>
+                                <option value="front-end web developer">Front-end Web Developer</option>
+                                <option value="back-end developer">Back-end Developer</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="other"></div>
+                            <label id="recommendation-label" for="recommendation">Would you recommend CrazyJay to a friend?</label>
+                            <div class="radio">
+                                <label id="absolutely" for="absolutely"><input type="radio" name="recommendation" value="absolutely" required /> Absolutely</label>
+                                <label id="perhaps" for="perhaps"><input type="radio" name="recommendation" value="perhaps" required /> Perhaps</label>
+                                <label id="no" for="no"><input type="radio" name="recommendation" value="no" required /> I would not</label>
+                                <label id="unsure" for="unsure"><input type="radio" name="recommendation" value="Not sure" required /> Not sure</label>   
+                            </div>
+                            <label id="source-label" for="source">How do you know about CrazyJay?</label>
+                            <select id="dropdown" name="source" onchange="showOtherField(this.options[this.selectedIndex].value, this.name, 1)" required>
+                                <option value="select your option" selected disabled>Select your option</option>
+                                <option value="google">Internet Search</option>
+                                <option value="networking">Networking</option>
+                                <option value="ad">Advertisement</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="other"></div>
+                            <label id="feature-label" for="feature">What do you like about CrazyJay?</label>
+                            <!--"feature" is referred to work features-->
+                            <select id="dropdown" name="feature" onchange="showOtherField(this.options[this.selectedIndex].value, this.name, 2)" required>
+                                <option value="select your option" selected disabled>Select your option</option>
+                                <option value="meeting">Meetings</option>
+                                <option value="project">Projects</option>
+                                <option value="seminar">Seminars</option>
+                                <option value="challenge">Challenges</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="other"></div>
+                            <label id="improvement-label" for="improvement">What do you think we should work on? <small>(Check all that apply)</small></label>
+                            <div class="checkbox">
+                                <label id="meeting" for="meeting"><input type="checkbox" name="improvement" value="meeting" /> Meetings</label>
+                                <label id="project" for="project"><input type="checkbox" name="improvement" value="project" /> Projects</label>
+                                <label id="seminar" for="seminar"><input type="checkbox" name="improvement" value="seminar" /> Seminars</label>
+                                <label id="challenge" for="challenge"><input type="checkbox" name="improvement" value="challenge" /> Challenges</label>
+                                <label id="environment" for="environment"><input type="checkbox" name="improvement" value="environment" /> Work Environment</label> 
+                                <label id="other" for="other"><input type="checkbox" name="improvement" value="other" onclick="checkOtherField(this.name, 3)" /> Other</label> 
+                            </div>
+                            <div class="other"></div>
+                            <label id="comment-label" for="comment">Any comments or suggestions?</label>
+                            <textarea style="min-height: 125px;" placeholder="Enter your comment..."></textarea>
+                            <input id="submit" type="submit" value="Submit" />
+                        </form>
+                    </div>
+                </main>
+            </div>
+        </div>
+	</body>
+</html>

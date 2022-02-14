@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato&family=Open+Sans:wght@500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0; 
+}
+#navbar {
+    height: 70px;
+    width: 100%;
+    background-color: rgb(133, 133, 133);
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+#logo-header {
+    display: flex; 
+    position: absolute;
+    left: 50px;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+}
+#header-img {
+    width: 55px;
+}
+#logo-header h1 {
+    padding: 5px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px;
+}
+#navbar ul {
+    position: absolute;
+    right: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#navbar ul li {
+    display: inline-block;
+    padding: 0 20px;
+    text-align: center;
+}
+.nav-link {
+    text-decoration: none; 
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+.nav-link:hover {
+    color: blue;
+    cursor: pointer;
+}
+#full_image-bg {
+    position: fixed;
+    display: none;
+}
+#main {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+}
+#table {
+    border: 5px solid black;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+#table-head {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 22px;
+    padding: 15px 0;
+    background-color: rgb(170, 170, 170);
+}
+.img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.img:hover {
+    cursor: pointer;
+}
+.img-container {
+    position: relative;
+    height: 70%;
+}
+.ClosingX {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 6px;
+    cursor: pointer;
+}
+.left {
+    transform: rotate(135deg);
+}
+.right {
+    transform: rotate(-45deg);
+}
+.footer {
+    background-color: rgb(133, 133, 133);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+.footer p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    width: 98px;
+    height: 21px; 
+    text-align: center;
+}
+.follow {
+    width: 188px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.follow .fa {
+    font-size: 30px;
+    text-decoration: none;
+    color: #1d1a1a;
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+@media screen and (max-width: 725px) {
+    .img-container {
+        height: 38.75%;
+    }
+    #header-img {
+        width: 45px; 
+    }
+    #logo-header h1 {
+                    font-size: 20px;
+                }
+    #table-head {
+        font-size: 15.5px;
+    }
+    .img {
+        width: 95px;
+        height: 95px;
+        object-fit: cover;
+    }
+    .footer p {
+        font-size: 14px;
+    }
+    .footer .fa {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #navbar {
+        flex-direction: column;
+        height: 150px;
+        padding-bottom: 5px;
+    }
+    #logo-header {
+        position: static;
+    }
+    #navbar ul {
+        position: static;
+        width: 115px;
+    }
+    #navbar ul li {
+        display: block;
+        padding: 2.5px 0;
+    }
+}
