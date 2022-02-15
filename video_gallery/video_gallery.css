@@ -45,7 +45,7 @@ body {
     color: #0000FF;
 }
 .main {
-    padding: 20px 0;
+    padding: 35px 0;
 }
 .video-watch-section {
     display: none;
@@ -117,7 +117,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-.follow .fa {
+.fa {
     font-size: 1.875em;
     text-decoration: none;
     color: #1d1a1a;
@@ -145,6 +145,14 @@ body {
     .fig-caption {
         font-size: 0.25em; /* By default, 1em is equivalent to 16px , and 2em is equivalent to 32px. */
     } 
+    .footer h4 {
+        font-size: 0.8em;
+    }
+    .fa {
+        font-size: 1.5625em;
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @media screen and (max-width: 500px) {

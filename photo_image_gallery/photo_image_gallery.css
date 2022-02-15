@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0; 
 }
-#navbar {
+.navbar {
     height: 70px;
     width: 100%;
     background-color: rgb(133, 133, 133);
@@ -12,7 +12,7 @@ body {
     align-items: center; 
     justify-content: center;
 }
-#logo-header {
+.logo-header {
     display: flex; 
     position: absolute;
     left: 50px;
@@ -20,22 +20,22 @@ body {
     justify-content: center;
     height: 70px;
 }
-#header-img {
+.header-img {
     width: 55px;
 }
-#logo-header h1 {
+.logo-header h1 {
     padding: 5px;
     font-family: 'Great Vibes', cursive;
     font-size: 24px;
 }
-#navbar ul {
+.menu {
     position: absolute;
     right: 50px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
-#navbar ul li {
+.menu-item {
     display: inline-block;
     padding: 0 20px;
     text-align: center;
@@ -50,22 +50,22 @@ body {
     color: blue;
     cursor: pointer;
 }
-#full_image-bg {
+.full_image-bg {
     position: fixed;
     display: none;
 }
-#main {
+.main {
     display: flex;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.2);
     padding: 20px 0;
 }
-#table {
+.table {
     border: 5px solid black;
     margin: 20px 0;
     border-collapse: collapse;
 }
-#table-head {
+.table-head {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 22px;
     padding: 15px 0;
@@ -129,7 +129,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-.follow .fa {
+.fa {
     font-size: 30px;
     text-decoration: none;
     color: #1d1a1a;
@@ -145,13 +145,13 @@ body {
     .img-container {
         height: 38.75%;
     }
-    #header-img {
+    .header-img {
         width: 45px; 
     }
-    #logo-header h1 {
+    .logo-header h1 {
                     font-size: 20px;
                 }
-    #table-head {
+    .table-head {
         font-size: 15.5px;
     }
     .img {
@@ -162,26 +162,27 @@ body {
     .footer p {
         font-size: 14px;
     }
-    .footer .fa {
+    .fa {
         width: 40px;
         height: 40px;
+        font-size: 25px;
     }
 }
 
 @media screen and (max-width: 580px) {
-    #navbar {
+    .navbar {
         flex-direction: column;
         height: 150px;
         padding-bottom: 5px;
     }
-    #logo-header {
+    .logo-header {
         position: static;
     }
-    #navbar ul {
+    .menu {
         position: static;
         width: 115px;
     }
-    #navbar ul li {
+    .menu-item {
         display: block;
         padding: 2.5px 0;
     }
