@@ -23,6 +23,7 @@ var videos = ["https://www.dropbox.com/s/lczw607pqqgovtk/Ip%20Man%20Naruto.mp4?d
 			
 			function play(source, id) {
 				document.getElementById('table-header').style.display = 'none';
+				document.querySelector(".videos").style.gridTemplateRows = '1fr 1fr 1fr 1fr 1fr';
 				document.getElementById('video-watch').innerHTML = '<video id="video-play" class="video" controls autoplay><source src="' + source + '" type="video/mp4"></video><aside class="buttons"><button onclick="prev()">Prev</button><button onclick="next()">Next</button></aside>';
 				document.getElementById('video-watch').style.display = 'flex';
 				document.getElementById('video-watch').style.justifyContent = 'center';
@@ -50,5 +51,6 @@ var videos = ["https://www.dropbox.com/s/lczw607pqqgovtk/Ip%20Man%20Naruto.mp4?d
 			function exit() {
 				document.getElementById('video-watch').innerHTML = '<video id="video-play" class="video" controls autoplay><source src="" type="video/mp4"></video><aside class="buttons"><button onclick="prev()">Prev</button><button onclick="next()">Next</button></aside>';
 				document.getElementById('video-watch').style.display = 'none';
-				document.getElementById('table-header').style.display = 'table-row';
+				document.getElementById('table-header').style.display = 'flex';
+				document.querySelector(".videos").style.gridTemplateRows = '1fr 1fr 1fr 1fr 1fr 1fr';
 			}
