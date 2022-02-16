@@ -6,80 +6,82 @@
 body {
     background-color: rgba(0, 0, 0, 0.15);  
 }
-#header {
+.header {
     position: fixed;
-    padding: 8px 0;      
-    min-height: 55px;    
+    height: 55px;
+    padding: 8px 0;         
     background-color: rgb(158, 157, 157); 
     width: 100%;
 }
-#header #container {
-    margin: 0 60px;
+.empty-top {
+    height: 71px;
 }
-#header #container #logo-name {
+.logo-name {
     display: flex; 
     position: absolute;
     left: 50px;
     align-items: center;
 }   
-#header #container #logo-name h1 {
+.logo-name h1 {
     padding: 5px;
+    font-size: 1.5em;
     font-family: 'Great Vibes', cursive;
 }
-#header #container #nav-bar ul {
+.menu {
     padding: 15px 0;
     position: absolute;
     right: 50px; 
+    font-size: 0.95em;
     font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
     list-style: none;
 }
-#header #container #nav-bar ul li {
+.menu-item {
     display: inline-block;
     padding: 0 20px;  
 }
-#header #container #nav-bar ul li .nav-link {
+.nav-link {
     text-decoration: none;
     color: #000;
 }
-#header #container #nav-bar ul li .nav-link:hover {
+.nav-link:hover {
     color: blue;
 }
-#empty-top {
-    height: 55px;
-}
-#info-section, #video-section {
+.info-section, .video-section {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 0;
     flex-direction: column;
 }
-#info-section h2 {
-    padding: 20px;
+.info-header {
+    text-align: center;
+    width: 500px;
+    padding: 20px; 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-#info-section .info-part {
+.info-part {
     padding: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-#budget-img, #travel-img, #cuisine-img {
+.img {
     padding: 15px;
 }
-#info-section .info-part p {
+.info {
     padding: 15px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     max-width: 600px;
 }
-#pricing-section {
+.pricing-section {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 30px 0;
 }
-#pricing-section .pricing-card {
+.pricing-card {
     border: 1px solid black;
     border-radius: 6px;
     margin: 0 15px;
@@ -90,53 +92,59 @@ body {
     justify-content: center;
     flex-direction: column;
 }
-#pricing-section .pricing-card h2, #pricing-section .pricing-card h3 {
+.plan, .price {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 10px;
     margin-bottom: 15px;
 }
-#pricing-section .pricing-card button {
+.pricing-card-button {
     border-radius: 5px;
     border: 0;
     background-color: rgba(19, 122, 122, 0.767);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 5px;
     color: #fff;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 600;
 }
-#pricing-section .pricing-card button:hover {
+.pricing-card-button:hover {
     background-color: rgba(6, 146, 146, 0.644);
     cursor: pointer;
 }
-#form {
+.form {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
 }
-#form h3 {
+.email-label {
+    text-align: center;
+    width: 500px;
+}
+.label-h3 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-#form input {
-    margin: 20px;
-    width: 200px;
-    padding: 5px;
+
+.email, .submit {
     border-radius: 5px;
     border: 0;
+    padding: 5px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 14px;
 }
-#form #submit {
+.email {
+    margin: 20px;
+    width: 200px;
+    font-size: 0.875em;
+}
+.submit {
     margin-top: 0;
     width: 100px;
     background-color: rgb(13, 28, 156);
-    color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 15px;
+    color: #fff;
+    font-size: 0.9375em;
     font-weight: 600;
 }
-#form #submit:hover {
+.submit:hover {
     background-color: rgb(34, 54, 230);
     cursor: pointer;
 }
@@ -148,18 +156,59 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-@media (max-width: 580px) {
-    #header #container #nav-bar ul li:nth-child(1) {
-        display: none;
+@media screen and (max-width: 700px) {
+    .header {
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
-}
-@media (max-width: 500px) {
-    #header #container #nav-bar ul li:nth-child(2) {
-        display: none;
+    .empty-top {
+        height: 166px;
     }
-}
-@media (max-width: 420px) {
-    #header #container #nav-bar ul li:nth-child(3) {
-        display: none;
+    .logo-name, .menu {
+        position: static;
+    }
+    .menu {
+        padding: 0;
+    }
+    .menu-item {
+        display: block;
+        margin: 7.5px 0;
+    }
+    .info-section, .video-section {
+        padding: 15px 0;
+    }
+    .info-header {
+        font-size: 1.125em;
+        width: 425px;
+    }
+    .info {
+        font-size: 0.85em;
+    }
+    .img {
+        width: 45px;
+    }
+    .video {
+        width: 450px;
+        height: 253.125px;
+    }
+    .pricing-card {
+        width: 150px;
+        height: 225px;
+    }
+    .plan, .price {
+        font-size: 1em;
+    }
+    .pricing-card-button {
+        font-size: 0.85em;
+    }
+    .email-label {
+        width: 450px;
+        font-size: 0.85em;
+    }
+    .submit {
+        width: 90px;
     }
 }
