@@ -98,6 +98,12 @@ body, html {
     .title-header {
         font-size: 0.6875em;
     }
+    .title {
+        width: 300px;
+    }
+    .description {
+        width: 325px;
+    }
     .survey-form {
         width: 300px;
         min-width: 300px;
