@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+* {
+    font-family: 'Poppins', sans-serif;
+}
 body, html {
     height: 100%;
     margin: 0; 
@@ -24,13 +27,11 @@ body, html {
 .title {
     text-align: center;
     width: 360px;
-    font-family: 'Poppins', sans-serif;
     margin-bottom: 0;
 }
 .description {
     width: 410px;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
     font-style: italic;
     font-weight: 100;
 }
@@ -51,10 +52,9 @@ body, html {
 .label {
     color: #FFFFFF;
     margin-bottom: 10px;
-    font-family: 'Poppins', sans-serif;
     font-size: 1.0625em;
 }
-.input, .textarea, .radio, .checkbox, .submit, #dropdown {
+.input, .other, .other-input, .textarea, .radio, .checkbox, .submit, #dropdown {
     font-size: 1em;
 }
 .input, .textarea {
@@ -62,17 +62,19 @@ body, html {
     border: 0;
     border-radius: 5px;
     margin-bottom: 25px;
-    font-family: 'Poppins', sans-serif;
 }
 #dropdown {
     padding: 10px;
     border: 0;
     border-radius: 5px;
     margin-bottom: 25px;
-    font-family: 'Poppins', sans-serif;
 }
+.other-input {
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
+} 
 .radio, .checkbox {
-    font-family: 'Poppins', sans-serif;
     color: #FFFFFF;
     margin: 0;
 }
@@ -85,7 +87,6 @@ body, html {
     color: #FFFFFF;
     background-color: rgb(0, 100, 92);
     padding: 5px 0;
-    font-family: 'Poppins', sans-serif;
     border: 0;
     border-radius: 5px;
     cursor: pointer;
@@ -110,7 +111,7 @@ body, html {
     .label {
         font-size: 0.8125em;
     }
-    .input, .textarea, .radio, .checkbox, .submit, #dropdown {
+    .input, .other, .textarea, .radio, .checkbox, .submit, #dropdown {
         font-size: 0.75em;
     }
 }
