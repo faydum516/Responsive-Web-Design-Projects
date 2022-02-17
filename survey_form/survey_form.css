@@ -96,16 +96,16 @@ body, html {
 
 @media screen and (max-width: 625px) {
     .title-header {
-        font-size: 0.875em;
+        font-size: 0.8125em;
     }
     .survey-form {
-        width: 400px;
-        min-width: 400px;
+        width: 300px;
+        min-width: 300px;
     }
     .label {
-        font-size: 0.9375em;
+        font-size: 0.8125em;
     }
     .input, .textarea, .radio, .checkbox, .submit, #dropdown {
-        font-size: 0.875em;
+        font-size: 0.75em;
     }
 }
