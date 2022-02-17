@@ -96,7 +96,7 @@ body, html {
 
 @media screen and (max-width: 625px) {
     .title-header {
-        font-size: 0.8125em;
+        font-size: 0.6875em;
     }
     .survey-form {
         width: 300px;
