@@ -191,8 +191,8 @@ body {
         width: 45px;
     }
     .video {
-        width: 450px;
-        height: 253.125px;
+        width: 350px;
+        height: 196.875px;
     }
     .pricing-card {
         width: 150px;
@@ -205,8 +205,8 @@ body {
         font-size: 0.85em;
     }
     .email-label {
-        width: 450px;
-        font-size: 0.85em;
+        width: 400px;
+        font-size: 0.75em;
     }
     .submit {
         width: 90px;
