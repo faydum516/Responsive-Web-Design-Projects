@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Geographical Map</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="geographical_map.css">
+        <script src="geographical_map.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<nav class="navbar">
+		    <header class="header">
+                <img class="header-logo" style="width: 50px;" src="https://static.thenounproject.com/png/203202-200.png" alt="CrazyJay Logo">
+		        <h2 class="header-title">CrazyJay Maps</h2> 
+		    </header>
+		    <input class="input" id="input" type="text" oninput="input()" placeholder="Search" />
+		</nav>
+        <main class="main">
+            <div class="mapouter">
+                <iframe width="600" height="500" id="gmap_canvas" class="gmap_canvas" src="https://maps.google.com/maps?q=&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="social-icons">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a id="profile-link" href="https://github.com/faydum516" target="_blank" class="fa fa-github"></a>
+                <a href="https://www.linkedin.com/in/hugo-xu-a95309153/" target="_blank" class="fa fa-linkedin"></a>
+            </div>
+            <h3 class="inc">&copy; 2022 CrazyJay Inc.</h3>
+        </footer>
+	</body>
+</html>

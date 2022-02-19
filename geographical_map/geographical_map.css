@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato&family=Open+Sans:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: #FFFF9F;
+    display: flex;
+    align-items: center;
+}   
+.header {
+    position: absolute;
+    left: 60px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-family: 'Great Vibes', cursive;
+} 
+.header-title {
+    width: 170px;
+    text-align: center;
+}
+.input {
+    position: absolute; 
+    width: 40vw;
+    left: 350px; 
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 7.5px 5px;
+    font-family: 'Open Sans', sans-serif;
+} 
+.main {
+    background-color: rgba(0, 0, 0, 0.015625);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    margin-bottom: -55px;
+}
+.gmap_canvas {
+    width: 600px; 
+    height: 500px;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.social-icons, .inc {
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+}
+.social-icons {
+    background-color: #5a5a5a;
+    padding: 12.5px 0;
+    font-size: 1.5em;
+}
+.fa, .inc {
+    color: #FFFFFF;
+}
+.fa {
+    padding: 10px;
+    text-decoration: none;
+}
+.inc {
+    background-color: #474747;
+    padding: 20px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875em;
+}
+
+@media screen and (max-width: 700px) {
+    .gmap_canvas {
+        width: 480px;
+        height: 400px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .navbar {
+        height: 120px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .header, .input {
+        position: static;
+    }
+    .input {
+        width: 250px;
+        margin-top: 10px;
+    }
+    .main {
+        margin-bottom: -110px;
+    }
+    .gmap_canvas {
+        width: 360px;
+        height: 300px;
+    }
+    .social-icons {
+        font-size: 1.25em;
+    }
+    .inc {
+        font-size: 0.8125em;
+    }
+}
