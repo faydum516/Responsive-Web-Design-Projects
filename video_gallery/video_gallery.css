@@ -31,7 +31,7 @@ body {
     right: 50px;
     list-style: none;
 }
-.menu li {
+.menu-item {
     display: inline-block;
     margin: 0 10px;
 }
@@ -164,10 +164,10 @@ body {
         font-size: 1.25em;
     }
     .img, .fig-caption {
-        width: 100px;
+        width: 88.89px;
     }
     .img {
-        height: 57.5px;
+        height: 51.11px;
     }
     .fig-caption {
         font-size: 0.75em; /* By default, 1em is equivalent to 16px , and 2em is equivalent to 32px. */
@@ -195,7 +195,7 @@ body {
         position: static;
         width: 100px;
     }
-    .menu li {
+    .menu-item {
         display: block;
         text-align: center;
     }
