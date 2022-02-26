@@ -5,33 +5,33 @@
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
-#navbar {
+.navbar {
     position: fixed; 
     width: 270px;
     background-color: rgba(0, 0, 0, 0.2);
 }
-#navbar #header h1 {
+.title {
     padding: 20px;
     font-weight: 200;
 }
-#navbar #menu {
+.menu {
     height: calc(100vh - 73px); 
     overflow-y: scroll;
     list-style: none;
 }
-#navbar #menu li .nav-link {
+.menu-item .nav-link {
     display: block;
     border-top: 1px solid black;
     padding: 15px;
 }
-#navbar #menu li ul {
+.sub-menu {
     display: none;
 }
-#navbar #menu li:hover ul {
+.menu-item:hover .sub-menu {
     display: block;
     background-color: rgba(0, 0, 0, 0.22);
 }
-#navbar #menu li:hover ul li .nav-link {
+.menu-item:hover .sub-menu-item .nav-link {
     padding-left: 35px;
 }
 .nav-link {
@@ -42,30 +42,30 @@
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.4);
 }
-#main-doc {
+.main-doc {
     float: right;
     width: calc(100% - 270px); 
     padding: 0;
     margin: 0;
 }
-#main-doc .main-section {
+.main-section {
     margin-bottom: 15px;
 }
-#main-doc .main-section header h1 {
+.main-section-title {
     padding: 15px;
     font-weight: 100;
-    font-size: 28px;
+    font-size: 1.75em;
 }
-#main-doc .main-section p {
+.main-section p {
     padding: 15px;
 }
 .main-section .main-section {
     padding: 15px;
 }
-.main-section .main-section header h2 {
+.main-section-subtitle {
     padding: 15px;  
     font-weight: 100;
-    font-size: 21px;
+    font-size: 1.3125em;
 } 
 .wing_chun-img-bg, 
 .wing_chun-video-bg {
@@ -81,25 +81,35 @@
 }
 .wing_chun-img-bg code {
     padding: 10px;
-    font-size: 12px;
+    font-size: 0.75em;
 }
 .main-section ul, .main-section ol {
     padding-left: 45px;
 }
 
 @media screen and (max-width: 900px) {
-    #navbar {
+    .navbar {
         position: static;
         width: 100%;
         text-align: center;
     }
-    #main-doc {
+    .main-doc {
         float: none;
         width: 100%;
     }
-    #navbar #menu {
+    .menu {
         height: 300px;
         overflow-y: scroll;
         border: 1px solid black;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wing_chun-video {
+        width: 320px;
+        height: 180px;
+    }
+    .wing_chun-img {
+        width: 200px;
     }
 }
