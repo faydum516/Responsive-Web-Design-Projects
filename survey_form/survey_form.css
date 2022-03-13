@@ -5,37 +5,30 @@
 }
 body, html {
     height: 100%;
-    margin: 0; 
-    padding: 0;
-}
-.whole-bg {
     background-image: url("https://dessinemoiunvoyage.com/wp-content/uploads/2020/12/Costa-Rica-destination-de-choix-9uyN0c5cnXg-unsplash.jpg");
     background-size: cover;
     background-attachment: fixed;
+    margin: 0; 
+    padding: 0; 
 }
-.layer {
+.main {
     background-color: rgba(14, 92, 138, 0.829);
+    min-width: 400px; 
 }
-.title-header {
-    display: flex;
-    align-items: center;  
-    flex-direction: column;
-    margin: 0;
-    padding-top: 20px;
+.title, .description {
     color: #FFFFFF;
+    text-align: center;
+    margin: 0 auto;
 }
 .title {
-    text-align: center;
-    width: 360px;
-    margin-bottom: 0;
+    padding: 35px 0 12.5px 0;
 }
 .description {
-    width: 410px;
-    text-align: center;
     font-style: italic;
     font-weight: 100;
+    padding: 10px 0;
 }
-.survey-bg {
+.survey-section {
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -96,17 +89,14 @@ body, html {
 }
 
 @media screen and (max-width: 625px) {
-    .title-header {
-        font-size: 0.6875em;
-    }
-    .title, .survey-form {
-        width: 300px;
+    .title {
+        font-size: 1em;
     }
     .description {
-        width: 325px;
+        font-size: 0.6875em;
     }
     .survey-form {
-        min-width: 300px;
+        width: 300px;
     }
     .label {
         font-size: 0.8125em;
