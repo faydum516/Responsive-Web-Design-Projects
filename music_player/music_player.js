@@ -1,7 +1,7 @@
 function play(source, image, alt) {
     document.querySelector('#songcover').src = image;
     document.querySelector('#songcover').alt = alt;
-    document.querySelector('#songplay').src = source;
+    document.querySelector('#audio-source').src = source;
     document.querySelector('#musicplay').style.display = 'flex';
 }
 
