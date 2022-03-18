@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "song": "Gurenge (紅蓮華)",
         "artist": "LiSA",
         "source": "https://faydum516.github.io/mysonglist/LiSA - Gurenge (紅蓮華).mp3",
@@ -7,6 +8,7 @@
         "alt": "Demon Slayer"
     },
     {
+        "id": 2,
         "song": "What Have I Got (我得到什麼)",
         "artist": "Deric Wan (溫兆倫)",
         "source": "https://faydum516.github.io/mysonglist/Deric Wan (溫兆倫) - What Have I Got (我得到什麼).mp3",
@@ -14,6 +16,7 @@
         "alt": "Deric Wan"
     },
     {
+        "id": 3,
         "song": "Sore ga Daiji (それが大事)",
         "artist": "The Daijiman Brothers Band (大事マンブラザーズ)",
         "source": "https://faydum516.github.io/mysonglist/大事マンブラザーズそれが大事.mp3",
@@ -21,10 +24,43 @@
         "alt": "Daijiman Brothers Band"
     },
     {
+        "id": 4,
         "song": "Blinding Lights (80s Remix)",
         "artist": "The Weeknd",
         "source": "https://faydum516.github.io/mysonglist/The Weeknd - Blinding Lights (80s Remix).mp3",
         "cover": "https://faydum516.github.io/mysonglistimages/The Weeknd - Blinding Lights (80s Remix).jpg",
         "alt": "Blinding Lights"
+    }, 
+    {
+        "id": 5,
+        "song": "Top Gun Anthem",
+        "artist": "Harold Faltermeyer & Steve Stevens",
+        "source": "https://faydum516.github.io/mysonglist2/Top Gun Anthem.mp3",
+        "cover": "https://faydum516.github.io/mysonglistimages/Top Gun.jpg",
+        "alt": "Top Gun"
+    }, 
+    {
+        "id": 6,
+        "song": "Judas",
+        "artist": "FOZZY",
+        "source": "https://faydum516.github.io/mysonglist2/Fozzy - Judas.mp3",
+        "cover": "https://faydum516.github.io/mysonglistimages/Judas.jpg",
+        "alt": "Judas"
+    },
+    {
+        "id": 7,
+        "song": "Akaza Theme",
+        "artist": "Samuel Kim",
+        "source":"https://faydum516.github.io/mysonglist2/Akaza Theme.mp3",
+        "cover": "https://faydum516.github.io/mysonglistimages/Akaza.jpg",
+        "alt": "Akaza"
+    }, 
+    {
+        "id": 8,
+        "song": "Kamado Tanjirou no Uta",
+        "artist": "Nami Nakagawa",
+        "source": "https://faydum516.github.io/mysonglist2/Nami Nakagawa - Kamado Tanjirō No Uta.mp3",
+        "cover": "https://faydum516.github.io/mysonglistimages/Tanjiro and Nezuko.png",
+        "alt": "Tanjiro & Nezuko"
     }
 ]

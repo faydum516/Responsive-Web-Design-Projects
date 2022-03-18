@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>My Song Player</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
+        <link rel="icon" href="https://faydum516.github.io/logos/logo-music-purple-leave-the-material.svg" type="image/svg">
         <link rel="stylesheet" href="music_player.css">
         <script src="music_player.js"></script>
 	</head>
 	<body>
         <main class="main">
             <section class="musicplay" id="musicplay">
-                <img id="songcover" src="" alt="" style="width: 300px; margin: 0;" />
-                <audio class="audioplay" id="audio-source" controls autoplay>
-                    <source src="" type="audio/mpeg">
-                </audio>
+                <div class="audio-bg">
+                    <!-- "audio-bg" is short for "audio background" -->
+                    <div class="left-arrow" id="left-arrow"></div>
+                    <div class="musicplayer">
+                        <img class="song-img" id="songcover" src="" alt="" />
+                        <audio class="audioplay" id="audio-source" controls autoplay>
+                            <source src="" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="right-arrow" id="right-arrow"></div>
+                </div>
+                <p class="song-title" id="song-name"></p>
+                <p class="artist-name" id="artist-name"></p>
             </section>
-            <section class="songsection" id="songsection"></section>
+            <section class="songsection" id="songsection">
+                <h1 class="title">Hugo's Songlist</h1>
+            </section>
+            <section class="button-section">
+                <button class="BTSM-button" id="backToMenu">Back to Song Menu</button>
+                <button class="BTP-button" id="backToPlay">Back to Play</button>
+                <!-- BTSM stands for "Back to Song Menu" -->
+                <!-- BTP-button stands for "Back To Play" -->
+            </section>
+            <p class="note">*This application does not work on iPads, nor does it work on other mobile devices including iPhones. Use it only on computers & laptops.</p>
         </main>
 	</body>
 </html>
