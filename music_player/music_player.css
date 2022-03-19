@@ -37,24 +37,24 @@ body {
 .left-arrow {
     width: 0;
     height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid hsl(240, 41%, 5%);
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid hsl(240, 41%, 5%);
 }
 .right-arrow {
     width: 0;
     height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid hsl(240, 41%, 5%);
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid hsl(240, 41%, 5%);
 }
 .left-arrow:hover {
     cursor: pointer;
-    border-right: 10px solid hsl(240, 51%, 11%);
+    border-right: 15px solid hsl(240, 51%, 11%);
 }
 .right-arrow:hover {
     cursor: pointer;
-    border-left: 10px solid hsl(240, 51%, 11%);
+    border-left: 15px solid hsl(240, 51%, 11%);
 }
 .song-title, .artist-name {
     color: hsl(195, 17%, 91%);
