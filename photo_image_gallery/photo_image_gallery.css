@@ -92,7 +92,7 @@
     height: 150px;
     object-fit: cover;
 }
-.img:hover {
+.figure:hover {
     cursor: pointer;
 }
 .img-container {
