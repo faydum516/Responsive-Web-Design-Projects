@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Tokyo Main.jpg",
+        "alt": "Tokyo"
+    },
+    {
+        "id": 2,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Guangzhou Twin Towers.jpg",
+        "alt": "Guangzhou"
+    },
+    {
+        "id": 3,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Costa Rica San Ramon.jpg",
+        "alt": "Costa Rica 1"
+    },
+    {
+        "id": 4,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Costa Rica Beach.jpg",
+        "alt": "Costa Rica 2"
+    }, 
+    {
+        "id": 5,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Taj Mahal.jpg",
+        "alt": "Taj Mahal"
+    },
+    {
+        "id": 6,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Great Walls of China.jpg",
+        "alt": "Great Walls of China"
+    },
+    {
+        "id": 7,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Niagara Falls and River.jpg",
+        "alt": "Niagara Falls"
+    }, 
+    {
+        "id": 8,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Tokyo Dome.jpg",
+        "alt": "Tokyo Dome"
+    },
+    {
+        "id": 9,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Singapore.jpg",
+        "alt": "Singapore"
+    },
+    {
+        "id": 10,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Grand Canyon.jpg",
+        "alt": "Grand Canyon"
+    },
+    {
+        "id": 11,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Santa Monica.jpg",
+        "alt": "Santa Monica"
+    },
+    {
+        "id": 12,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Parc Jean-Drapeau.jpg",
+        "alt": "Parc Jean-Drapeau"
+    },
+    {
+        "id": 13,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Madison Square Garden.jpg",
+        "alt": "Madison Square Garden"
+    },
+    {
+        "id": 14,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Chateau Frontenac.jpg",
+        "alt": "Château Frontenac"
+    },
+    {
+        "id": 15,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Eiffel Tower.jpg",
+        "alt": "Eiffel Tower"
+    },
+    {
+        "id": 16,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Tower of London.jpg",
+        "alt": "Tower of London"
+    },
+    {
+        "id": 17,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Krka National Park.jpg",
+        "alt": "Krka National Park"
+    },
+    {
+        "id": 18,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Moscow.jpg",
+        "alt": "Moscow"
+    },
+    {
+        "id": 19,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Gaspesie.jpg",
+        "alt": "Gaspésie"
+    },
+    {
+        "id": 20,
+        "img": "https://faydum516.github.io/crazyjay-photo-gallery/Vancouver.jpg",
+        "alt": "Vancouver"
+    }
+]

@@ -1,55 +1,123 @@
-var index, img;
+fetch("photo_images.json")
+    .then(response => response.json())
+    .then(data => {
+        const body = document.body;
 
-function show(src, alt, id) {
-    document.getElementById("full_image-bg").style.display = "flex";
-    document.getElementById("full_image-bg").style.justifyContent = "center";
-    document.getElementById("full_image-bg").style.alignItems = "center";
-    document.getElementById("full_image-bg").innerHTML = '<i class="arrow left" onclick="prev()"></i><div class="img-container"><img class="full_image" id="' + id + '" src="' + src + '" height="100%" alt="' + alt + '" /><span id="ClosingX" class="ClosingX" onclick="exit()">X</span></div><i class="arrow right" onclick="next()"></i>';
-    document.getElementById("full_image-bg").style.width = "100%";
-    document.getElementById("full_image-bg").style.height = "100%";
-    document.getElementById("full_image-bg").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-    index = Number(document.querySelector(".full_image").id); // The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.
-    window.addEventListener("keydown", arrowPress); // The arrowPress function consists only of pressing the left and right keys.
-}
-function exit() {
-    window.removeEventListener("keydown", arrowPress);
-    document.getElementById("full_image-bg").style.display = "none";
-}
-function next() {
-    img = document.querySelector(".full_image"); // The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.
-    index ++;
-    if (index > document.getElementsByClassName("img").length - 1) {
-        index = 0;
-    }
-    img.src = document.getElementsByClassName("img")[index].src;
-}
-function prev() {
-    img = document.querySelector(".full_image"); // The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.
-    index --;
-    if (index < 0) {
-        index = document.getElementsByClassName("img").length - 1;
-    }
-    img.src = document.getElementsByClassName("img")[index].src;
-}
-function arrowPress(event) {
-    if (event.key == "ArrowLeft") {
-        img = document.querySelector(".full_image"); // The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.
-        index --;
-        if (index < 0) {
-            index = document.getElementsByClassName("img").length - 1;
+        const photoTable = document.querySelector("#photo-table"); // The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.
+        const photos = document.createElement("div");
+        photos.className = "photos";
+        photoTable.appendChild(photos);
+
+        const fullImageScreen = document.createElement("div");
+        fullImageScreen.className = "full-image-screen";
+
+        body.insertBefore(fullImageScreen, body.firstChild);
+
+        const imgContainer = document.createElement("div");
+        imgContainer.className = "img-container";
+        
+        const fullImage = document.createElement("img");
+        fullImage.className = "full-image";
+        fullImage.src = "";
+        fullImage.alt = "";
+
+        const close = document.createElement("div");
+        close.className = "ClosingX";
+        close.innerHTML = "X";
+
+        imgContainer.appendChild(fullImage);
+        imgContainer.appendChild(close);
+
+        const leftArrow = document.createElement("i");
+        const rightArrow = document.createElement("i");
+        leftArrow.className = "arrow left";
+        rightArrow.className = "arrow right";
+
+        fullImageScreen.appendChild(leftArrow);
+        fullImageScreen.appendChild(imgContainer);
+        fullImageScreen.appendChild(rightArrow);
+
+        const imgSearch = new Map();
+        var id, index;
+
+        for(let obj of data) {
+            var figure = document.createElement("figure");
+            figure.className = "figure";
+
+            var image = document.createElement("img");
+            image.className = "img";
+
+            image.src = obj.img;
+            image.alt = obj.alt;
+
+            figure.appendChild(image);
+
+            figure.onclick = function() {
+                id = obj.id;
+                index = id - 1;
+                fullImage.src = imgSearch.get(id).img;
+                fullImage.alt = imgSearch.get(id).alt;
+                fullImageScreen.style.visibility = "visible";
+
+                window.addEventListener("keydown", arrowPress); // The arrowPress function consists only of pressing the left and right keys.
+            }
+
+            imgSearch.set(obj.id, obj);
+
+            photos.appendChild(figure);
         }
-        img.src = document.getElementsByClassName("img")[index].src;
-    }
-    if (event.key == "ArrowRight") {
-        img = document.querySelector(".full_image"); // The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.
-        index ++;
-        if (index > document.getElementsByClassName("img").length - 1) {
-            index = 0;
+
+        leftArrow.onclick = function() {
+            id--;
+            if (id < 1) {
+                id = data.length;
+            }
+            index = id - 1;
+            fullImage.src = imgSearch.get(id).img;
+            fullImage.alt = imgSearch.get(id).alt;
         }
-        img.src = document.getElementsByClassName("img")[index].src;
-    }
-    if (event.key == "Escape") {
-        window.removeEventListener("keydown", arrowPress);
-        document.getElementById("full_image-bg").style.display = "none";
-    }
-}
+
+        rightArrow.onclick = function() {
+            id++;
+            if (id > data.length) {
+                id = 1;
+            }
+            index = id - 1;
+            fullImage.src = imgSearch.get(id).img;
+            fullImage.alt = imgSearch.get(id).alt;
+        }
+
+        close.onclick = function() {
+            window.removeEventListener("keydown", arrowPress);
+            fullImageScreen.style.visibility = "hidden";
+            fullImage.src = "";
+            fullImage.alt = "";
+        }
+
+        function arrowPress(event) {
+            if (event.key == "ArrowLeft") {
+                id--;
+                if (id < 1) {
+                    id = data.length;
+                }
+                index = id - 1;
+                fullImage.src = imgSearch.get(id).img;
+                fullImage.alt = imgSearch.get(id).alt;
+            }
+            if (event.key == "ArrowRight") {
+                id++;
+                if (id > data.length) {
+                    id = 1;
+                }
+                index = id - 1;
+                fullImage.src = imgSearch.get(id).img;
+                fullImage.alt = imgSearch.get(id).alt;    
+            }
+            if (event.key == "Escape") {
+                window.removeEventListener("keydown", arrowPress);
+                fullImageScreen.style.visibility = "hidden";
+                fullImage.src = "";
+                fullImage.alt = "";
+            }
+        }
+    });
