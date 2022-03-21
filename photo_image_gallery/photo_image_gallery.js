@@ -95,7 +95,7 @@ fetch("photo_images.json")
         }
 
         function arrowPress(event) {
-            if (event.key == "ArrowLeft") {
+            if (event.key === "ArrowLeft") {
                 id--;
                 if (id < 1) {
                     id = data.length;
@@ -104,7 +104,7 @@ fetch("photo_images.json")
                 fullImage.src = imgSearch.get(id).img;
                 fullImage.alt = imgSearch.get(id).alt;
             }
-            if (event.key == "ArrowRight") {
+            if (event.key === "ArrowRight") {
                 id++;
                 if (id > data.length) {
                     id = 1;
@@ -113,7 +113,7 @@ fetch("photo_images.json")
                 fullImage.src = imgSearch.get(id).img;
                 fullImage.alt = imgSearch.get(id).alt;    
             }
-            if (event.key == "Escape") {
+            if (event.key === "Escape") {
                 window.removeEventListener("keydown", arrowPress);
                 fullImageScreen.style.visibility = "hidden";
                 fullImage.src = "";
