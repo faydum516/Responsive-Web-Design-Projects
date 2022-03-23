@@ -38,7 +38,7 @@ fetch("photo_images.json")
         fullImageScreen.appendChild(rightArrow);
 
         const imgSearch = new Map();
-        var id, index;
+        var id;
 
         for(let obj of data) {
             var figure = document.createElement("figure");
@@ -54,16 +54,14 @@ fetch("photo_images.json")
 
             figure.onclick = function() {
                 id = obj.id;
-                index = id - 1;
-                fullImage.src = imgSearch.get(id).img;
-                fullImage.alt = imgSearch.get(id).alt;
+                fullImage.src = obj.img;
+                fullImage.alt = obj.alt;
                 fullImageScreen.style.visibility = "visible";
 
                 window.addEventListener("keydown", arrowPress); // The arrowPress function consists only of pressing the left and right keys.
             }
-
+            
             imgSearch.set(obj.id, obj);
-
             photos.appendChild(figure);
         }
 
@@ -72,7 +70,6 @@ fetch("photo_images.json")
             if (id < 1) {
                 id = data.length;
             }
-            index = id - 1;
             fullImage.src = imgSearch.get(id).img;
             fullImage.alt = imgSearch.get(id).alt;
         }
@@ -82,7 +79,6 @@ fetch("photo_images.json")
             if (id > data.length) {
                 id = 1;
             }
-            index = id - 1;
             fullImage.src = imgSearch.get(id).img;
             fullImage.alt = imgSearch.get(id).alt;
         }
@@ -100,7 +96,6 @@ fetch("photo_images.json")
                 if (id < 1) {
                     id = data.length;
                 }
-                index = id - 1;
                 fullImage.src = imgSearch.get(id).img;
                 fullImage.alt = imgSearch.get(id).alt;
             }
@@ -109,7 +104,6 @@ fetch("photo_images.json")
                 if (id > data.length) {
                     id = 1;
                 }
-                index = id - 1;
                 fullImage.src = imgSearch.get(id).img;
                 fullImage.alt = imgSearch.get(id).alt;    
             }
