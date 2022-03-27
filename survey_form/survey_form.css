@@ -13,7 +13,6 @@ body, html {
 }
 .main {
     background-color: rgba(14, 92, 138, 0.829);
-    min-width: 400px; 
 }
 .title, .description {
     color: #FFFFFF;
