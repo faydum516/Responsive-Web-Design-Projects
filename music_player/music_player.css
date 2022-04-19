@@ -17,12 +17,11 @@ body {
 .main {
     flex-direction: column;
 }
-.song-img {
+.song-img, .audioplay {
     width: 300px;
 }
 .audioplay {
     background-color: rgb(240, 240, 240);
-    width: 300px;
 }
 .musicplay {
     margin: 15px auto;
@@ -59,10 +58,13 @@ body {
 .song-title, .artist-name {
     color: hsl(195, 17%, 91%);
 }
+.song-title {
+    margin-top: 8.75px;
+}
 .musicplayer {
     display: flex;
     flex-direction: column;
-    margin: 0 8.75px 8.75px 8.75px;
+    margin: 0 8.75px;
 } 
 .songsection {
     display: flex;
