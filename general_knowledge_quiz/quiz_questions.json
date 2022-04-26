@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "question": "Who was the first gymnast to be awarded a perfect score of 10.0 at the Olympic Games?",
+        "multiChoices": ["Nellie Kim", "Mary Lou Retton", "Nadia Comăneci", "Alexander Dityatin"],
+        "correctAnswer": "Nadia Comăneci"
+    },
+    {
+        "id": 2,
+        "question": "What is the largest archipelago in the world?",
+        "multiChoices": ["Indonesia", "Cuba", "Iceland", "Philippines"],
+        "correctAnswer": "Indonesia"
+    },
+    {
+        "id": 3,
+        "question": "Who was the first Formula 1 World Champion?",
+        "multiChoices": ["Juan Manuel Fangio", "Giuseppe Farina", "Mike Hawthorn", "Alberto Ascari"],
+        "correctAnswer": "Giuseppe Farina"
+    },
+    {
+        "id": 4,
+        "question": "Complete this sentence: \"This nation will remain the land of the free only so long as it is __________________.\"",
+        "multiChoices": ["the land of brave", "the home of the great", "the land of the great", "the home of the brave"],
+        "correctAnswer": "the home of the brave"
+    }, 
+    {
+        "id": 5,
+        "question": "What is the oldest programming language still in use today?",
+        "multiChoices": ["Lisp", "BASIC", "FORTRAN", "COBOL"], 
+        "correctAnswer": "FORTRAN"
+    },
+    {
+        "id": 6,
+        "question": "Who said: \"The only thing we have to fear is fear itself.\"?",
+        "multiChoices": ["Franklin Delano Roosevelt", "John Fitzgerald Kennedy", "Harry S. Truman", "Dwight D. Eisenhower"],
+        "correctAnswer": "Franklin Delano Roosevelt"
+    }, 
+    {
+        "id": 7,
+        "question": "Which hockey team has won the most Stanley Cups?",
+        "multiChoices": ["Boston Bruins", "Toronto Maple Leafs", "Montreal Canadians", "Detroit Red Wings"],
+        "correctAnswer": "Montreal Canadians"
+    },
+    {
+        "id": 8,
+        "question": "What is the name of Pink Floyd's debut album?",
+        "multiChoices": ["More", "Ummagumma", "The Piper at the Gates of Dawn", "A Saucerful of Secrets"],
+        "correctAnswer": "The Piper at the Gates of Dawn"
+    }, 
+    {
+        "id": 9,
+        "question": "In what state and territory in India is the Taj Mahal mauloseum located?",
+        "multiChoices": ["Delhi", "Punjab", "Ladakh", "Uttar Pradesh"],
+        "correctAnswer": "Uttar Pradesh"
+    },
+    {
+        "id": 10,
+        "question": "What is the name of the sport played by witches and wizards riding flying broomsticks?",
+        "multiChoices": ["Broom Game", "Pinball Wizard", "Quidditch", "Finnitch"],
+        "correctAnswer": "Quidditch"
+    },
+    {
+        "id": 11,
+        "question": "Which one of the following choices is best known for drumming with one arm?",
+        "multiChoices": ["Rick Allen", "Nick Mason", "Chad Smith", "Steven Adler"],
+        "correctAnswer": "Rick Allen"
+    },
+    {
+        "id": 12,
+        "question": "Which one of the following auto company choices was founded first?",
+        "multiChoices": ["Toyota", "Chevrolet", "Ford", "Volkswagen"],
+        "correctAnswer": "Ford"
+    },
+    {
+        "id": 13,
+        "question": "What boxer-wrestler fight took place in 1976 and was billed as \"The War of the Worlds\"?",
+        "multiChoices": ["André the Giant vs. Muhammad Ali", "Antonio Inoki vs. Muhammad Ali", "André the Giant vs. Joe Frazier", "Antonio Inoki vs. Joe Frazier"],
+        "correctAnswer": "Antonio Inoki vs. Muhammad Ali"
+    },
+    {
+        "id": 14,
+        "question": "Which one of the following Tupac Shakur album choices was produced by Eminem?",
+        "multiChoices": ["Loyal to the Game", "Still I Rise", "Better Dayz", "Until the End of Time"],
+        "correctAnswer": "Loyal to the Game"
+    },
+    {
+        "id": 15,
+        "question": "Who created JavaScript?",
+        "multiChoices": ["Dennie Ritchie", "Guido van Rossum", "Bjarne Stroustrup", "Brendan Eich"],
+        "correctAnswer": "Brendan Eich"
+    }
+]
