@@ -189,7 +189,7 @@ fetch("quiz_questions.json")
             function countDown() {
                 timerBarWidth -= 10;
                 timerBar.style.width = timerBarWidth + "%";
-                console.log("CountdownOne!");
+                // console.log("CountdownOne!");
                 if (timerBarWidth === 0) {
                     moveOn();
                 }
