@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quiz Your Knowledge</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="general_knowledge_quiz.css">
+        <link rel="icon" href="question_mark.png" type="image/png">
+        <script type="text/javascript" src="general_knowledge_quiz.js"></script>
+    </head>
+    <body>
+        <header class="header" id="header">
+            <h1 class="header-name">Welcome to <span style="font-family: 'Oleo Script Swash Caps', cursive;">Quiz Your Knowledge</span></h1>
+        </header>
+        <main class="main">
+            <div class="timer-container" id="timerContainer">
+                <div class="timer-bar" id="timerBar"></div>
+            </div>
+            <div class="quiz-progress" id="quizProgress">
+                <div class="quiz-progress-container" id="quizProgressContainer">
+                    <div class="quiz-progress-bar" id="quizProgressBar"></div>
+                </div>
+                <div class="progress-minmax">
+                    <p class="progress-minvalue">0</p>
+                    <p class="progress-maxvalue">100</p>
+                </div>
+            </div>
+            <form class="quiz-form" id="quiz"></form>
+            <fieldset class="quiz-results" id="quizResults">
+                <legend style="font-size: 1.0625em; font-weight: 700;">Quiz Results</legend>
+                <div class="quiz-result">
+                    <label for="correct-answers">Number of Correct Answers:</label>
+                    <input class="result-input"  type="text" id="correct-answers" name="correct-answers" disabled>
+                </div> 
+                <div class="quiz-result">
+                    <label for="num-questions">Total Number of Questions:</label>
+                    <input class="result-input"  type="text" id="num-questions" name="num-questions" disabled>
+                </div>         
+                <div class="quiz-result">
+                    <label for="passing-score">Passing Score:</label>
+                    <input class="result-input"  type="text" id="passing-score" name="passing-score" value="60% (6/10)" disabled>
+                </div> 
+                <div class="quiz-result">
+                    <label for="score">Score:</label>
+                    <input class="result-input" type="text" id="quiz-score" name="score" disabled>
+                </div>
+            </fieldset> 
+            <div class="buttons" id="BTNs">           
+                <button class="start-btn" id="startButton">Start Quiz</button>
+                <button class="submit-btn" id="submitButton">Submit</button>
+                <button class="submit-and-finish-btn" id="submit&finishButton">Submit & Finish</button>
+                <button class="review-btn" id="reviewButton">Review Quiz</button>
+                <button class="backToResults-btn" id="backToResultsButton">Back to Results</button>
+                <a href="general_knowledge_quiz.html" style="text-decoration:none;"><button class="restart-btn" id="restartButton">Restart Quiz</button></a>
+            </div>
+        </main>
+    </body>
+</html>
